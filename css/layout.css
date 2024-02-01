@@ -57,9 +57,6 @@ body {
   flex-basis: 50%;
 }
 
-
-
-
 /* About Section */
 
 #about-section {
@@ -73,9 +70,6 @@ body {
   flex-direction: column;
   gap: 34px;
 }
-
-
-
 
 /* Project Section */
 
@@ -112,8 +106,6 @@ body {
       object-fit: cover;
       object-position: center;
     }
-
-
 
 
 /* Project Pages */
@@ -218,6 +210,3 @@ body {
     max-width: 100%;
   }
 }
-
-
-
