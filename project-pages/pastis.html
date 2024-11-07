@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pastis Counter</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    #count {
+      font-size: 48px;
+      margin: 20px 0;
+    }
+    #pastisButton {
+      width: 150px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pastis Counter</h1>
+  <div id="count">0</div>
+  <!-- Replace with your pastis glass image -->
+  <img id="pastisButton" src="../assets/images/pastis.png" alt="Glass of Pastis" />
+
+  <script>
+    // Retrieve saved count from local storage or initialize to 0
+    let count = localStorage.getItem("pastisCount") ? parseInt(localStorage.getItem("pastisCount")) : 0;
+
+    // Display the initial count
+    const countElement = document.getElementById("count");
+    countElement.textContent = count;
+
+    // Increment count when the image is clicked
+    document.getElementById("pastisButton").addEventListener("click", () => {
+      count += 1;
+      countElement.textContent = count;
+
+      // Save the new count in local storage
+      localStorage.setItem("pastisCount", count);
+    });
+  </script>
+</body>
+</html>
