@@ -79,25 +79,52 @@
   </div>
 
   <h1>Pastis Counter</h1>
-  <div id="count">0</div>
+  <div id="count">100</div>
   <!-- Replace with your pastis glass image -->
   <img id="pastisButton" src="../assets/images/pastis.png" alt="Glass of Pastis" />
 
   <script>
-    // Retrieve saved count from local storage or initialize to 0
-    let count = localStorage.getItem("pastisCount") ? parseInt(localStorage.getItem("pastisCount")) : 0;
+    // Your JSONBin details
+    const BIN_ID = "675b6ea3e41b4d34e4647814"; // Replace with your Bin ID
+    const API_KEY = "$2a$10$bxy3kcX5XwOTobCir2VRqOEtgOVasn.VXI1RlQb7QWEaQUbcvoPQS"; // Replace with your API Key
+    const BASE_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
 
-    // Display the initial count
+    // DOM elements
     const countElement = document.getElementById("count");
-    countElement.textContent = count;
+    const pastisButton = document.getElementById("pastisButton");
+
+    // Fetch the initial count from JSONBin
+    fetch(BASE_URL, {
+      headers: {
+        "X-Access-Key": API_KEY,
+        "Content-Type": "application/json"
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        countElement.textContent = data.record.pastisCount;
+      })
+      .catch(err => console.error("Error fetching count:", err));
 
     // Increment count when the image is clicked
-    document.getElementById("pastisButton").addEventListener("click", () => {
-      count += 1;
-      countElement.textContent = count;
+    pastisButton.addEventListener("click", () => {
+      const currentCount = parseInt(countElement.textContent);
+      const newCount = currentCount + 1;
 
-      // Save the new count in local storage
-      localStorage.setItem("pastisCount", count);
+      // Update the count in JSONBin
+      fetch(BASE_URL, {
+        method: "PUT",
+        headers: {
+          "X-Access-Key": API_KEY,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ pastisCount: newCount })
+      })
+        .then(response => response.json())
+        .then(() => {
+          countElement.textContent = newCount;
+        })
+        .catch(err => console.error("Error updating count:", err));
     });
   </script>
 <!-- FOOTER -->
