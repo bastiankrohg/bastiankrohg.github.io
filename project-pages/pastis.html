@@ -50,6 +50,12 @@
       width: 150px;
       cursor: pointer;
     }
+    .button-container {
+    margin-top: 30px; 
+    }
+    #footer {
+    margin-top: 40px; /* Adds padding above the footer */
+    }
   </style>
 </head>
 <body>
@@ -82,6 +88,13 @@
   <div id="count">100</div>
   <!-- Replace with your pastis glass image -->
   <img id="pastisButton" src="../assets/images/pastis.png" alt="Glass of Pastis" />
+
+  <!-- Buttons styled like the contact button -->
+  <div class="button-container">
+    <a id="decrementButton" class="button" href="#">
+      <span class="button-text">Decrement</span>
+    </a>
+  </div>
 
   <script>
     // Your JSONBin details
@@ -125,6 +138,29 @@
           countElement.textContent = newCount;
         })
         .catch(err => console.error("Error updating count:", err));
+    });
+    // Decrement the count when the decrement button is clicked
+    decrementButton.addEventListener("click", () => {
+      const currentCount = parseInt(countElement.textContent);
+
+      // Ensure the count doesn't go below 0
+      if (currentCount > 0) {
+        const newCount = currentCount - 1;
+
+        fetch(BASE_URL, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Access-Key": API_KEY,
+          },
+          body: JSON.stringify({ pastisCount: newCount }),
+        })
+          .then(response => response.json())
+          .then(() => {
+            countElement.textContent = newCount;
+          })
+          .catch(err => console.error("Error updating count:", err));
+      }
     });
   </script>
 <!-- FOOTER -->
