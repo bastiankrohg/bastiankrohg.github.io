@@ -54,8 +54,8 @@
 
     var lane = Math.min(lanes, Math.floor(t * lanes) + 1);
     status.textContent = t >= 1
-      ? "Survey complete · " + found + " flags for review"
-      : "Lane " + pad(lane) + "/" + pad(lanes) + " · Coverage " + pad(Math.round(t * 100)) + "% · Flags " + found;
+      ? "Survey complete · " + found + " indicators for follow-up"
+      : "Lane " + pad(lane) + "/" + pad(lanes) + " · Progress " + pad(Math.round(t * 100)) + "% · Flags " + found;
   }
 
   var raf = null;

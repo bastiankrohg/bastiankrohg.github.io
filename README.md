@@ -29,6 +29,9 @@ In `index.html`, find the `fieldcam` figure. Uncomment either the `<video>` (sel
 compressed and well under GitHub's 100 MB file limit) or the `<iframe>` (Vimeo/YouTube), and delete the
 `fieldcam__placeholder` block.
 
+Before publishing footage from hazardous areas, strip GPS/telemetry/location overlays and get clearance
+from the operator and, where relevant, the national mine action authority.
+
 ## Research workspace (uxo.bastiankrohg.com)
 
 The restricted research pages live on a separate host at `uxo.bastiankrohg.com/<project>`.

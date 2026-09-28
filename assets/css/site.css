@@ -105,12 +105,11 @@ p:last-child { margin-bottom: 0; }
 }
 .muted { color: var(--muted); }
 
-/* Hazard marker: the IMAS red triangle, used sparingly as a bullet/mark */
+/* Survey-point marker: a small red square, used sparingly as a bullet/mark */
 .marker {
   display: inline-block;
-  width: 0.72em; height: 0.62em;
+  width: 0.55em; height: 0.55em;
   background: var(--signal);
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
   flex: none;
 }
 
@@ -212,9 +211,10 @@ p:last-child { margin-bottom: 0; }
 .s-plan { fill: none; stroke: var(--line-strong); stroke-width: 1; stroke-dasharray: 2 4; }
 .s-swath { fill: none; stroke: color-mix(in srgb, var(--ink) 8%, var(--paper-2)); stroke-width: 30; stroke-linejoin: miter; }
 .s-trail { fill: none; stroke: var(--ink); stroke-width: 1.3; stroke-linejoin: round; }
-.s-flag polygon { fill: var(--signal); }
-.s-flag circle { fill: none; stroke: var(--signal); stroke-width: 1; }
-.s-flag text { fill: var(--signal); font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.06em; }
+.s-flag .ring { fill: var(--paper-2); stroke: var(--ink); stroke-width: 1.3; }
+.s-flag .dot { fill: var(--ink); }
+.s-flag .ping { fill: none; stroke: var(--ink); stroke-width: 1; }
+.s-flag text { fill: var(--ink-2); font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.06em; }
 .s-flag { transition: opacity 0.3s; }
 .s-flag.is-hidden { opacity: 0; }
 .s-flag .ping { transform-box: fill-box; transform-origin: center; }
@@ -288,22 +288,13 @@ p:last-child { margin-bottom: 0; }
 .fieldcam__corners::after { top: 0; right: 0; border-top-width: 1.5px; border-right-width: 1.5px; }
 .fieldcam__corners i::before { bottom: 0; left: 0; border-bottom-width: 1.5px; border-left-width: 1.5px; }
 .fieldcam__corners i::after { bottom: 0; right: 0; border-bottom-width: 1.5px; border-right-width: 1.5px; }
-.fieldcam__reticle {
-  position: absolute; left: 50%; top: 50%; width: 56px; height: 56px; transform: translate(-50%, -50%);
-  opacity: 0.45;
-}
-.fieldcam__reticle::before, .fieldcam__reticle::after { content: ""; position: absolute; background: currentColor; }
-.fieldcam__reticle::before { left: 50%; top: 0; bottom: 0; width: 1px; }
-.fieldcam__reticle::after { top: 50%; left: 0; right: 0; height: 1px; }
 .fieldcam__msg {
-  position: absolute; left: 50%; top: 50%; transform: translate(-50%, calc(-50% + 64px));
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
   text-align: center; width: min(80%, 420px);
 }
 .fieldcam__msg strong { display: block; font-weight: 500; font-size: clamp(15px, 2vw, 19px); letter-spacing: -0.005em; margin-bottom: 4px; }
 .fieldcam__msg span { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; }
 @media (max-width: 520px) {
-  .fieldcam__msg { transform: translate(-50%, calc(-50% + 44px)); }
-  .fieldcam__reticle { width: 36px; height: 36px; }
   .fieldcam__corners::before, .fieldcam__corners::after,
   .fieldcam__corners i::before, .fieldcam__corners i::after { width: 14px; height: 14px; }
 }

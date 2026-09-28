@@ -85,7 +85,7 @@
         <div>
           <p class="eyebrow"><span class="marker" aria-hidden="true"></span>PhD candidate &middot; Applied robotics &middot; University of Oslo</p>
           <h1>Robotics for humanitarian <em>mine action</em>.</h1>
-          <p class="lead">I&rsquo;m Bastian Krohg. My research looks at how drones and other robotic systems can make finding and clearing landmines safer and faster.</p>
+          <p class="lead">I&rsquo;m Bastian Krohg. My research looks at how drones and other robotic systems can support survey teams in locating explosive ordnance, so land can be released back to communities safely and more efficiently.</p>
           <div class="actions">
             <a class="btn btn--solid" href="#research">The research <span class="arrow" aria-hidden="true">&darr;</span></a>
             <a class="btn" href="/projects/">Earlier work <span class="arrow" aria-hidden="true">&rarr;</span></a>
@@ -94,7 +94,7 @@
         </div>
       <figure class="survey" data-survey data-lanes="8" aria-labelledby="survey-caption">
         <div class="survey__bar survey__bar--top" aria-hidden="true">
-          <span>Area 01 &middot; Aerial survey</span><span>Lawnmower pattern</span>
+          <span>SHA-01 &middot; Aerial survey</span><span>Coverage pattern</span>
         </div>
         <svg viewBox="0 0 400 300" role="img" aria-labelledby="survey-caption">
           <defs>
@@ -115,34 +115,39 @@
           <path class="s-plan" d="M36 45 H364 V75 H36 V105 H364 V135 H36 V165 H364 V195 H36 V225 H364 V255 H36"/>
           <path class="s-trail" d="M36 45 H364 V75 H36 V105 H364 V135 H36 V165 H364 V195 H36 V225 H364 V255 H36"/>
           <g class="s-flag" data-x="128" data-y="109" transform="translate(128 109)">
-            <circle class="ping" r="6"/>
-            <polygon points="0,-5 5,4 -5,4"/>
+            <circle class="ping" r="5"/>
+            <circle class="ring" r="4.5"/>
+            <circle class="dot" r="1.4"/>
             <text x="8" y="-5">01</text>
           </g>
           <g class="s-flag" data-x="256" data-y="131" transform="translate(256 131)">
-            <circle class="ping" r="6"/>
-            <polygon points="0,-5 5,4 -5,4"/>
+            <circle class="ping" r="5"/>
+            <circle class="ring" r="4.5"/>
+            <circle class="dot" r="1.4"/>
             <text x="8" y="-5">02</text>
           </g>
           <g class="s-flag" data-x="208" data-y="171" transform="translate(208 171)">
-            <circle class="ping" r="6"/>
-            <polygon points="0,-5 5,4 -5,4"/>
+            <circle class="ping" r="5"/>
+            <circle class="ring" r="4.5"/>
+            <circle class="dot" r="1.4"/>
             <text x="8" y="-5">03</text>
           </g>
           <g class="s-flag" data-x="292" data-y="202" transform="translate(292 202)">
-            <circle class="ping" r="6"/>
-            <polygon points="0,-5 5,4 -5,4"/>
+            <circle class="ping" r="5"/>
+            <circle class="ring" r="4.5"/>
+            <circle class="dot" r="1.4"/>
             <text x="8" y="-5">04</text>
           </g>
           <g class="s-flag" data-x="150" data-y="229" transform="translate(150 229)">
-            <circle class="ping" r="6"/>
-            <polygon points="0,-5 5,4 -5,4"/>
+            <circle class="ping" r="5"/>
+            <circle class="ring" r="4.5"/>
+            <circle class="dot" r="1.4"/>
             <text x="8" y="-5">05</text>
           </g>
           <g class="s-base" transform="translate(20 45)">
             <rect x="-5" y="-5" width="10" height="10"/>
           </g>
-          <text class="s-base-label" x="12" y="34">LZ</text>
+          <text class="s-base-label" x="12" y="34">HOME</text>
           <g class="s-drone" transform="translate(36 255)">
             <line x1="-6" y1="-6" x2="6" y2="6"/>
             <line x1="-6" y1="6" x2="6" y2="-6"/>
@@ -154,9 +159,9 @@
           </g>
         </svg>
         <figcaption class="survey__bar survey__bar--bottom">
-          <span class="survey__status" aria-live="off">Survey complete &middot; 5 flags for review</span>
+          <span class="survey__status" aria-live="off">Survey complete &middot; 5 indicators for follow-up</span>
           <button class="survey__replay" type="button" hidden>&#8635; Replay</button>
-          <span id="survey-caption" class="sr-only">Illustration: a drone flies a back-and-forth coverage pattern over a suspected hazardous area and flags points for review.</span>
+          <span id="survey-caption" class="sr-only">Illustration: a drone flies a back-and-forth coverage pattern over a suspected hazardous area and flags points for follow-up by a survey team.</span>
         </figcaption>
       </figure>
       </div>
@@ -175,19 +180,19 @@
           </div>
           <div class="focus">
             <div>
-              <span class="mono">A &middot; Survey</span>
+              <span class="mono">Interest &middot; A</span>
               <h3>From the air</h3>
-              <p>Drone-based sensing to help map and prioritise suspected hazardous areas.</p>
+              <p>Aerial sensing to support non-technical and technical survey.</p>
             </div>
             <div>
-              <span class="mono">B &middot; Perception</span>
+              <span class="mono">Interest &middot; B</span>
               <h3>In real conditions</h3>
               <p>Sensing that holds up in vegetation, uneven terrain and changing weather.</p>
             </div>
             <div>
-              <span class="mono">C &middot; Deployment</span>
+              <span class="mono">Interest &middot; C</span>
               <h3>With the people who clear</h3>
-              <p>Tools shaped around operators&rsquo; workflows and humanitarian standards.</p>
+              <p>Tools built around operators&rsquo; workflows and IMAS-based land release.</p>
             </div>
           </div>
           <p class="note"><span class="marker" aria-hidden="true"></span><span>Project details, data and results will be shared here as they are published.</span></p>
@@ -213,7 +218,6 @@
             -->
             <div class="fieldcam__placeholder" aria-hidden="true">
               <div class="fieldcam__corners"><i></i></div>
-              <div class="fieldcam__reticle"></div>
               <div class="fieldcam__hud">
                 <span class="hud-tl">CAM 01 &middot; Nadir</span>
                 <span class="hud-tr"><span class="hud-dot"></span>Standby</span>
@@ -226,7 +230,7 @@
               </div>
             </div>
           </figure>
-          <p class="caption">Drone footage from field work will appear here once it can be shared.</p>
+          <p class="caption">Footage from field work will appear here once it has been cleared for sharing.</p>
         </div>
       </div>
     </section>
@@ -237,8 +241,8 @@
           <span class="label"><b>03</b> Background</span>
         </div>
         <div>
-          <h2>Embedded systems, then robots in the field.</h2>
-          <p class="prose" style="margin:20px 0 32px">I trained as an embedded systems engineer in France, spent time in South Korea and Silicon Valley, and came back to Norway to put robotics to work where it matters.</p>
+          <h2>Embedded systems, then field robotics.</h2>
+          <p class="prose" style="margin:20px 0 32px">I trained as an embedded systems engineer in France, spent time in South Korea and Silicon Valley, and came back to Norway to apply robotics to humanitarian mine action.</p>
           <ol class="log">
             <li class="now">
               <span class="code" title="Oslo">OSL</span>
@@ -252,7 +256,7 @@
             </li>
             <li>
               <span class="code" title="Toulouse">TLS</span>
-              <div><h3>MSc, Embedded Systems Engineering</h3><p>INSA Toulouse, with a master&rsquo;s in International Management at Toulouse School of Management &middot; <a class="more" href="/projects/insa-toulouse/">Projects</a></p></div>
+              <div><h3>Engineering degree (MSc), Embedded Systems</h3><p>INSA Toulouse, with a master&rsquo;s in International Management at Toulouse School of Management &middot; <a class="more" href="/projects/insa-toulouse/">Projects</a></p></div>
               <span class="when"><!-- TODO: years --></span>
             </li>
             <li>
@@ -279,19 +283,19 @@
           <p class="prose" style="margin:20px 0 32px">Projects from my studies, internships and spare time, grouped by where I did them.</p>
           <div class="cards">
         <a class="card" href="/projects/insa-toulouse/">
-          <span class="mono"><span>TLS</span><span>10 entries</span></span>
+          <span class="mono"><span>TLS</span></span>
           <h3>INSA Toulouse</h3>
           <p>Embedded systems, control and robotics &mdash; including an autonomous rover as my final-year project.</p>
           <span class="go">View <span aria-hidden="true">&rarr;</span></span>
         </a>
         <a class="card" href="/projects/innovation-norway/">
-          <span class="mono"><span>SFO</span><span>04 entries</span></span>
+          <span class="mono"><span>SFO</span></span>
           <h3>Innovation Norway, Silicon Valley</h3>
-          <p>Four months at Nordic Innovation House in Palo Alto: startup programmes and an AI assistant prototype.</p>
+          <p>Business development internship at Nordic Innovation House, Palo Alto: startup programmes and an AI assistant prototype.</p>
           <span class="go">View <span aria-hidden="true">&rarr;</span></span>
         </a>
         <a class="card" href="/projects/independent/">
-          <span class="mono"><span>IND</span><span>04 entries</span></span>
+          <span class="mono"><span>IND</span></span>
           <h3>Independent &amp; hackathons</h3>
           <p>Side projects, freelance builds and the first Hugging Face LeRobot hackathon.</p>
           <span class="go">View <span aria-hidden="true">&rarr;</span></span>
@@ -323,7 +327,6 @@
   <footer class="site-footer">
     <div class="wrap">
       <span>&copy; <span data-year>2026</span> Bastian Krohg &middot; Oslo, Norway</span>
-      <span>59.94&deg; N &nbsp;10.72&deg; E</span>
     </div>
   </footer>
   <script src="/assets/js/site.js" defer></script>
