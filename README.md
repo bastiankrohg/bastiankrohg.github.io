@@ -6,7 +6,8 @@ working on robotics for humanitarian mine action. Plain static HTML/CSS/JS, serv
 ## Structure
 
 ```
-index.html                     Home: research, field video, background, earlier work, contact
+index.html                     Home: research, field footage, background, earlier work, contact
+field/index.html               Drone playground (assets/js/field.js)
 projects/                      Earlier work, grouped by where it was done
   insa-toulouse/
   innovation-norway/
@@ -14,7 +15,8 @@ projects/                      Earlier work, grouped by where it was done
 404.html                       Not-found page; also forwards /uxo/<project> (see below)
 uxo/index.html                 Forwards /uxo/ to https://uxo.bastiankrohg.com/
 assets/css/site.css            All styles (light + dark theme tokens at the top)
-assets/js/site.js              Hero survey animation + footer year
+assets/js/field.js             Playground: scene, markers (POIS) and minefields (AREAS) at the top
+assets/js/site.js              Footer year
 assets/images/web/             Optimised WebP photos used by the new pages
 project-pages/                 Old URLs (redirect stubs) + standalone pages (pastis, tracker, beau, metamanager)
 css/, js/                      Legacy styles still used by pastis.html and tracker.html
@@ -25,9 +27,9 @@ opening the files directly with `file://` won't load styles).
 
 ## Adding the field video
 
-In `index.html`, find the `fieldcam` figure. Uncomment either the `<video>` (self-hosted, keep it
+In `index.html`, find the `video` figure. Uncomment either the `<video>` (self-hosted, keep it
 compressed and well under GitHub's 100 MB file limit) or the `<iframe>` (Vimeo/YouTube), and delete the
-`fieldcam__placeholder` block.
+"Coming later." placeholder.
 
 Before publishing footage from hazardous areas, strip GPS/telemetry/location overlays and get clearance
 from the operator and, where relevant, the national mine action authority.
@@ -43,3 +45,9 @@ The restricted research pages live on a separate host at `uxo.bastiankrohg.com/<
   `https://uxo.bastiankrohg.com/<project>` (query string and hash preserved).
 - When the workspace is live, un-hide the "Collaborators: research workspace" note in the research
   section of `index.html`.
+
+## Editing the playground
+
+Markers are defined in the `POIS` array at the top of `assets/js/field.js` (position, title, dates, text,
+link and the hint shown when it's next). Fenced areas are in `AREAS`. Progress is kept in the visitor's
+localStorage.

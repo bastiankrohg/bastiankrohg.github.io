@@ -10,15 +10,15 @@
   <!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Earlier work — Bastian Krohg</title>
-  <meta name="description" content="Earlier projects by Bastian Krohg, grouped by INSA Toulouse, Innovation Norway Silicon Valley and independent work.">
-  <link rel="canonical" href="https://bastiankrohg.com/projects/">
+  <title>The field — Bastian Krohg</title>
+  <meta name="description" content="Fly a drone over a field to explore Bastian Krohg&#x27;s background.">
+  <link rel="canonical" href="https://bastiankrohg.com/field/">
   <meta name="theme-color" content="#f3f1ea" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f1113" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Earlier work — Bastian Krohg">
-  <meta property="og:description" content="Earlier projects by Bastian Krohg, grouped by INSA Toulouse, Innovation Norway Silicon Valley and independent work.">
-  <meta property="og:url" content="https://bastiankrohg.com/projects/">
+  <meta property="og:title" content="The field — Bastian Krohg">
+  <meta property="og:description" content="Fly a drone over a field to explore Bastian Krohg&#x27;s background.">
+  <meta property="og:url" content="https://bastiankrohg.com/field/">
   <meta property="og:image" content="https://bastiankrohg.com/assets/images/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/assets/icons/marker.svg" type="image/svg+xml">
@@ -39,41 +39,42 @@
       <nav class="site-nav" aria-label="Main">
         <a href="/#research">Research</a>
         <a href="/#background">Background</a>
-        <a href="/projects/" aria-current="page">Earlier work</a>
-        <a href="/field/">Field</a>
+        <a href="/projects/">Earlier work</a>
+        <a href="/field/" aria-current="page">Field</a>
         <a href="/#contact">Contact</a>
       </nav>
     </div>
   </header>
-  <main id="main">
-    <div class="wrap">
-      <section class="page-head">
-        <div class="crumbs"><a href="/">Home</a> / Earlier work</div>
-        <h1>Earlier work</h1>
-        <p class="lead">Projects from before the PhD, grouped by where I did them.</p>
-      </section>
-      <div class="cards" style="margin-bottom:clamp(56px,8vw,96px)">
-        <a class="card" href="/projects/insa-toulouse/">
-          <h3>INSA Toulouse</h3>
-          <p>Embedded systems, control and an autonomous rover.</p>
-        </a>
-        <a class="card" href="/projects/innovation-norway/">
-          <h3>Innovation Norway, Silicon Valley</h3>
-          <p>Startup programmes and an LLM assistant prototype, Palo Alto.</p>
-        </a>
-        <a class="card" href="/projects/independent/">
-          <h3>Independent &amp; hackathons</h3>
-          <p>LeRobot hackathon, web builds and small hardware projects.</p>
-        </a>
+  <main id="main" class="fx">
+    <canvas id="field" tabindex="0" aria-label="Field with a drone. Click or tap to fly, or use WASD or the arrow keys."></canvas>
+    <div class="fx-hud">
+      <div class="fx-status">
+        <strong id="fx-count">0 / 9 found</strong>
+        <span id="fx-hint"></span>
+      </div>
+      <button id="fx-list-btn" class="fx-btn" type="button" aria-expanded="false" aria-controls="fx-list">List</button>
+    </div>
+    <div id="fx-list" class="fx-list" hidden>
+      <ol id="fx-list-items"></ol>
+      <button id="fx-reset" class="fx-link" type="button">Start over</button>
+    </div>
+    <section id="fx-card" class="fx-card" hidden aria-live="polite">
+      <p id="fx-card-when" class="fx-when"></p>
+      <h2 id="fx-card-title"></h2>
+      <p id="fx-card-text"></p>
+      <div class="fx-card-actions"><a id="fx-card-link" href="/"></a><button id="fx-card-close" class="fx-link" type="button">Close</button></div>
+    </section>
+    <div id="fx-intro" class="fx-intro">
+      <div>
+        <h1>The field</h1>
+        <p>Fly the drone to find nine markers about my background. Fenced areas are minefields: fly over them to scan.</p>
+        <p class="fx-keys">Click or tap to fly there. Or use WASD / arrow keys.</p>
+        <button id="fx-start" class="btn btn--solid" type="button">Start</button>
+        <p class="fx-skip"><a href="/#background">Skip to the text version</a></p>
       </div>
     </div>
   </main>
-  <footer class="site-footer">
-    <div class="wrap">
-      <span>&copy; <span data-year>2026</span> Bastian Krohg</span>
-      <a href="mailto:bastian.krohg@its.uio.no">bastian.krohg@its.uio.no</a>
-    </div>
-  </footer>
+  <script src="/assets/js/field.js" defer></script>
   <script src="/assets/js/site.js" defer></script>
 </body>
 </html>

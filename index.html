@@ -81,6 +81,7 @@
         <a href="/#research">Research</a>
         <a href="/#background">Background</a>
         <a href="/projects/">Earlier work</a>
+        <a href="/field/">Field</a>
         <a href="/#contact">Contact</a>
       </nav>
     </div>
@@ -89,201 +90,87 @@
     <section class="hero">
       <div class="wrap">
         <div>
-          <p class="eyebrow"><span class="marker" aria-hidden="true"></span>PhD candidate &middot; Applied robotics &middot; University of Oslo</p>
-          <h1>Robotics for humanitarian <em>mine action</em>.</h1>
-          <p class="lead">I&rsquo;m Bastian Krohg. My research looks at how drones and other robotic systems can support survey teams in locating explosive ordnance, so land can be released back to communities safely and more efficiently.</p>
+          <h1>Bastian Krohg</h1>
+          <p class="lead">PhD candidate at the University of Oslo, working on robotics for humanitarian mine action.</p>
           <div class="actions">
-            <a class="btn btn--solid" href="#research">The research <span class="arrow" aria-hidden="true">&darr;</span></a>
-            <a class="btn" href="/projects/">Earlier work <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            <a class="btn btn--solid" href="/field/">Fly the drone <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            <a class="btn" href="#background">Background</a>
           </div>
-          <p class="coord"><span>Oslo, Norway</span><span>59.94&deg; N 10.72&deg; E</span></p>
         </div>
-      <figure class="survey" data-survey data-lanes="8" aria-labelledby="survey-caption">
-        <div class="survey__bar survey__bar--top" aria-hidden="true">
-          <span>SHA-01 &middot; Aerial survey</span><span>Coverage pattern</span>
-        </div>
-        <svg viewBox="0 0 400 300" role="img" aria-labelledby="survey-caption">
-          <defs>
-            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-              <path class="s-grid" d="M20 0H0V20" fill="none"/>
-            </pattern>
-          </defs>
-          <path class="s-swath" d="M36 45 H364 V75 H36 V105 H364 V135 H36 V165 H364 V195 H36 V225 H364 V255 H36"/>
-          <rect width="400" height="300" fill="url(#grid)"/>
-          <path class="s-contour" d="M-10 214C60 184 120 244 200 219S330 174 410 204"/>
-          <path class="s-contour" d="M-10 246C70 221 140 281 220 256S340 216 410 241"/>
-          <path class="s-contour" d="M-10 64C80 94 150 34 240 59S350 99 410 74"/>
-          <path class="s-contour" d="M-10 30C90 55 160 5 250 25S360 60 410 40"/>
-          <path class="s-contour" d="M52 150C52 122 92 112 118 128S142 176 110 182S52 172 52 150Z"/>
-          <path class="s-contour" d="M72 150C72 136 94 130 106 138S118 164 102 167S72 162 72 150Z"/>
-          <polygon class="s-area" points="70,68 190,52 300,76 342,150 318,238 210,250 110,236 58,160"/>
-          <text class="s-area-label" x="198" y="46">SHA-01</text>
-          <path class="s-plan" d="M36 45 H364 V75 H36 V105 H364 V135 H36 V165 H364 V195 H36 V225 H364 V255 H36"/>
-          <path class="s-trail" d="M36 45 H364 V75 H36 V105 H364 V135 H36 V165 H364 V195 H36 V225 H364 V255 H36"/>
-          <g class="s-flag" data-x="128" data-y="109" transform="translate(128 109)">
-            <circle class="ping" r="5"/>
-            <circle class="ring" r="4.5"/>
-            <circle class="dot" r="1.4"/>
-            <text x="8" y="-5">01</text>
-          </g>
-          <g class="s-flag" data-x="256" data-y="131" transform="translate(256 131)">
-            <circle class="ping" r="5"/>
-            <circle class="ring" r="4.5"/>
-            <circle class="dot" r="1.4"/>
-            <text x="8" y="-5">02</text>
-          </g>
-          <g class="s-flag" data-x="208" data-y="171" transform="translate(208 171)">
-            <circle class="ping" r="5"/>
-            <circle class="ring" r="4.5"/>
-            <circle class="dot" r="1.4"/>
-            <text x="8" y="-5">03</text>
-          </g>
-          <g class="s-flag" data-x="292" data-y="202" transform="translate(292 202)">
-            <circle class="ping" r="5"/>
-            <circle class="ring" r="4.5"/>
-            <circle class="dot" r="1.4"/>
-            <text x="8" y="-5">04</text>
-          </g>
-          <g class="s-flag" data-x="150" data-y="229" transform="translate(150 229)">
-            <circle class="ping" r="5"/>
-            <circle class="ring" r="4.5"/>
-            <circle class="dot" r="1.4"/>
-            <text x="8" y="-5">05</text>
-          </g>
-          <g class="s-base" transform="translate(20 45)">
-            <rect x="-5" y="-5" width="10" height="10"/>
-          </g>
-          <text class="s-base-label" x="12" y="34">HOME</text>
-          <g class="s-drone" transform="translate(36 255)">
-            <line x1="-6" y1="-6" x2="6" y2="6"/>
-            <line x1="-6" y1="6" x2="6" y2="-6"/>
-            <circle class="rotor" cx="-6" cy="-6" r="3.2"/>
-            <circle class="rotor" cx="6" cy="-6" r="3.2"/>
-            <circle class="rotor" cx="-6" cy="6" r="3.2"/>
-            <circle class="rotor" cx="6" cy="6" r="3.2"/>
-            <circle class="core" r="2.2"/>
-          </g>
-        </svg>
-        <figcaption class="survey__bar survey__bar--bottom">
-          <span class="survey__status" aria-live="off">Survey complete &middot; 5 indicators for follow-up</span>
-          <button class="survey__replay" type="button" hidden>&#8635; Replay</button>
-          <span id="survey-caption" class="sr-only">Illustration: a drone flies a back-and-forth coverage pattern over a suspected hazardous area and flags points for follow-up by a survey team.</span>
-        </figcaption>
-      </figure>
+        <a class="teaser" href="/field/">
+          <img src="/assets/images/field-preview.webp" alt="A drone over a field with trees, a pond and fenced-off minefields" width="1200" height="750">
+          <span>Fly a drone over a field to find my background &rarr;</span>
+        </a>
       </div>
     </section>
 
     <section class="section" id="research">
       <div class="wrap section-grid">
-        <div class="section-head">
-          <span class="label"><b>01</b> Research</span>
-        </div>
-        <div>
-          <h2>Safer ground, sooner.</h2>
-          <div class="prose" style="margin-top:20px">
-            <p>Landmines and explosive remnants of war keep killing and injuring people long after the fighting stops, and they keep farmland, roads and villages out of use. Clearing that land is slow, careful and dangerous work.</p>
-            <p>My PhD in the Robotics and Autonomous Systems group at the <strong>University of Oslo</strong>&rsquo;s Department of Technology Systems explores how robotics can support that work: drones and autonomous systems that help survey and clearance teams decide where to look, see more, and spend less time in harm&rsquo;s way.</p>
-          </div>
-          <div class="focus">
-            <div>
-              <span class="mono">Interest &middot; A</span>
-              <h3>From the air</h3>
-              <p>Aerial sensing to support non-technical and technical survey.</p>
-            </div>
-            <div>
-              <span class="mono">Interest &middot; B</span>
-              <h3>In real conditions</h3>
-              <p>Sensing that holds up in vegetation, uneven terrain and changing weather.</p>
-            </div>
-            <div>
-              <span class="mono">Interest &middot; C</span>
-              <h3>With the people who clear</h3>
-              <p>Tools built around operators&rsquo; workflows and IMAS-based land release.</p>
-            </div>
-            <div>
-              <span class="mono">Interest &middot; D</span>
-              <h3>Many robots, one area</h3>
-              <p>Swarm autonomy: coordinating multiple robots to cover ground together.</p>
-            </div>
-          </div>
-          <p class="note"><span class="marker" aria-hidden="true"></span><span>Project details, data and results will be shared here as they are published.</span></p>
+        <h2 class="section-title">Research</h2>
+        <div class="prose">
+          <p>Landmines and other explosive ordnance stay dangerous long after a conflict ends. My PhD looks at how drones and other robots can help survey teams find them, so the land can be cleared and used again.</p>
+          <p>Robotics and Autonomous Systems group, Department of Technology Systems, University of Oslo. Since November 2025.</p>
+          <h3 class="minor">Interests</h3>
+          <ul class="plain">
+            <li>Aerial survey with drones</li>
+            <li>Perception in real field conditions</li>
+            <li>Swarm autonomy</li>
+            <li>Tools that fit how mine action teams work</li>
+          </ul>
+          <p class="muted">Results will be posted here once published.</p>
           <!-- Research workspace (auth-protected, hosted separately). Remove "hidden" once uxo.bastiankrohg.com is live. -->
-          <p class="note" hidden><span class="marker" aria-hidden="true"></span><span>Collaborators: <a href="https://uxo.bastiankrohg.com/">research workspace &#8599;</a></span></p>
+          <p class="muted" hidden>Collaborators: <a href="https://uxo.bastiankrohg.com/">research workspace</a></p>
         </div>
       </div>
     </section>
 
-    <section class="section" id="field">
+    <section class="section" id="footage">
       <div class="wrap section-grid">
-        <div class="section-head">
-          <span class="label"><b>02</b> From the field</span>
-        </div>
+        <h2 class="section-title">Field footage</h2>
         <div>
-          <figure class="fieldcam">
+          <figure class="video">
             <!--
-              To add footage, uncomment ONE of these and delete the .fieldcam__placeholder block below.
+              To add footage, uncomment ONE of these and delete the <p> placeholder below.
               Self-hosted (keep it short and compressed, GitHub Pages has a 100 MB file limit):
               <video src="/assets/video/field.mp4" poster="/assets/images/field-poster.webp" controls muted playsinline preload="none"></video>
               Or embedded:
               <iframe src="https://player.vimeo.com/video/VIDEO_ID?dnt=1" title="Field footage" allow="fullscreen; picture-in-picture" loading="lazy"></iframe>
             -->
-            <div class="fieldcam__placeholder" aria-hidden="true">
-              <div class="fieldcam__corners"><i></i></div>
-              <div class="fieldcam__hud">
-                <span class="hud-tl">CAM 01 &middot; Nadir</span>
-                <span class="hud-tr"><span class="hud-dot"></span>Standby</span>
-                <span class="hud-bl">ALT --- m &nbsp; GS -- m/s</span>
-                <span class="hud-br">HDG ---&deg;</span>
-              </div>
-              <div class="fieldcam__msg">
-                <strong>Footage from the field is on its way.</strong>
-                <span>No signal yet</span>
-              </div>
-            </div>
+            <p>Coming later.</p>
           </figure>
-          <p class="caption">Footage from field work will appear here once it has been cleared for sharing.</p>
         </div>
       </div>
     </section>
 
     <section class="section" id="background">
       <div class="wrap section-grid">
-        <div class="section-head">
-          <span class="label"><b>03</b> Background</span>
-        </div>
+        <h2 class="section-title">Background</h2>
         <div>
-          <h2>Embedded systems, then field robotics.</h2>
-          <p class="prose" style="margin:20px 0 32px">I trained as an embedded systems engineer in France, spent time in South Korea and Silicon Valley, and came back to Norway to apply robotics to humanitarian mine action.</p>
           <ol class="log">
-            <li class="now">
-              <span class="code" title="Oslo">OSL</span>
-              <div><h3>PhD candidate, applied robotics</h3><p>University of Oslo, Department of Technology Systems &middot; Robotics and Autonomous Systems</p></div>
+            <li>
+              <div><h3>PhD, robotics</h3><p>University of Oslo</p></div>
               <span class="when">Nov 2025&ndash;</span>
             </li>
             <li>
-              <span class="code" title="San Francisco Bay Area">SFO</span>
-              <div><h3>Intern, Innovation Norway Silicon Valley</h3><p>Nordic Innovation House, Palo Alto &middot; <a class="more" href="/projects/innovation-norway/">Projects</a></p></div>
+              <div><h3>Intern, Innovation Norway</h3><p>Nordic Innovation House, Palo Alto &middot; <a href="/projects/innovation-norway/">Projects</a></p></div>
               <span class="when">Sep&ndash;Dec 2023</span>
             </li>
             <li>
-              <span class="code" title="Toulouse">TLS</span>
-              <div><h3>Engineering degree (MSc), Embedded Systems</h3><p>INSA Toulouse &middot; <a class="more" href="/projects/insa-toulouse/">Projects</a></p></div>
+              <div><h3>Engineering degree (MSc), embedded systems</h3><p>INSA Toulouse &middot; <a href="/projects/insa-toulouse/">Projects</a></p></div>
               <span class="when">2019&ndash;2025</span>
             </li>
             <li>
-              <span class="code" title="Toulouse">TLS</span>
               <div><h3>Master of International Management</h3><p>Toulouse School of Management</p></div>
               <span class="when">2023&ndash;2025</span>
             </li>
             <li>
-              <span class="code" title="Seoul">SEL</span>
-              <div><h3>Exchange semester</h3><p>Seoul National University, South Korea</p></div>
+              <div><h3>Exchange semester</h3><p>Seoul National University</p></div>
               <span class="when">Fall 2021</span>
             </li>
           </ol>
           <div class="facts">
-            <span><strong>Languages</strong> Norwegian, English, French</span>
-            <span><strong>Toolbox</strong> Embedded C, Python, RTOS, STM32, FPGA/VHDL, computer vision, path planning</span>
+            <p><strong>Languages</strong> Norwegian, English, French</p>
+            <p><strong>Tools</strong> C, Python, RTOS, STM32, FPGA/VHDL, computer vision, path planning</p>
           </div>
         </div>
       </div>
@@ -291,30 +178,20 @@
 
     <section class="section" id="work">
       <div class="wrap section-grid">
-        <div class="section-head">
-          <span class="label"><b>04</b> Earlier work</span>
-        </div>
+        <h2 class="section-title">Earlier work</h2>
         <div>
-          <h2>Before the PhD.</h2>
-          <p class="prose" style="margin:20px 0 32px">Projects from my studies, internships and spare time, grouped by where I did them.</p>
           <div class="cards">
         <a class="card" href="/projects/insa-toulouse/">
-          <span class="mono"><span>TLS</span></span>
           <h3>INSA Toulouse</h3>
-          <p>Embedded systems, control and robotics &mdash; including an autonomous rover as my final-year project.</p>
-          <span class="go">View <span aria-hidden="true">&rarr;</span></span>
+          <p>Embedded systems, control and an autonomous rover.</p>
         </a>
         <a class="card" href="/projects/innovation-norway/">
-          <span class="mono"><span>SFO</span></span>
           <h3>Innovation Norway, Silicon Valley</h3>
-          <p>Business development internship at Nordic Innovation House, Palo Alto: startup programmes and an AI assistant prototype.</p>
-          <span class="go">View <span aria-hidden="true">&rarr;</span></span>
+          <p>Startup programmes and an LLM assistant prototype, Palo Alto.</p>
         </a>
         <a class="card" href="/projects/independent/">
-          <span class="mono"><span>IND</span></span>
           <h3>Independent &amp; hackathons</h3>
-          <p>Side projects, freelance builds and the first Hugging Face LeRobot hackathon.</p>
-          <span class="go">View <span aria-hidden="true">&rarr;</span></span>
+          <p>LeRobot hackathon, web builds and small hardware projects.</p>
         </a>
           </div>
         </div>
@@ -323,18 +200,16 @@
 
     <section class="section" id="contact">
       <div class="wrap section-grid">
-        <div class="section-head">
-          <span class="label"><b>05</b> Contact</span>
-        </div>
+        <h2 class="section-title">Contact</h2>
         <div>
-          <p class="contact-line">For research collaboration, field partnerships or anything else, email <a href="mailto:bastian.krohg@its.uio.no">bastian.krohg@its.uio.no</a>.</p>
+          <p class="contact-line"><a href="mailto:bastian.krohg@its.uio.no">bastian.krohg@its.uio.no</a></p>
           <div class="socials">
-            <a href="https://www.linkedin.com/in/bastiankrohg/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
-            <a href="https://github.com/bastiankrohg" target="_blank" rel="noopener">GitHub &#8599;</a>
+            <a href="https://www.linkedin.com/in/bastiankrohg/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/bastiankrohg" target="_blank" rel="noopener">GitHub</a>
             <a href="mailto:baskrohg@gmail.com">Personal email</a>
             <!-- Add once available:
-            <a href="https://scholar.google.com/citations?user=ID" target="_blank" rel="noopener">Google Scholar &#8599;</a>
-            <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener">ORCID &#8599;</a>
+            <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener">ORCID</a>
+            <a href="https://scholar.google.com/citations?user=ID" target="_blank" rel="noopener">Google Scholar</a>
             -->
           </div>
         </div>
@@ -343,7 +218,8 @@
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <span>&copy; <span data-year>2026</span> Bastian Krohg &middot; Oslo, Norway</span>
+      <span>&copy; <span data-year>2026</span> Bastian Krohg</span>
+      <a href="mailto:bastian.krohg@its.uio.no">bastian.krohg@its.uio.no</a>
     </div>
   </footer>
   <script src="/assets/js/site.js" defer></script>
